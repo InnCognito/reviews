@@ -2,4 +2,7 @@
 /package-lock.json
 /.vscode/
 /aws-key/
+client/dist/bundle.js
 logfile
+*.log
+*.csv
