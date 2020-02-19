@@ -8,7 +8,7 @@
   },
   "scripts": {
     "react-dev": "webpack -d --watch --mode production --module-bind js=babel-loader",
-    "bulbasaur": "node database/initializer.js",
+    "bulbasaur": "node data_generator/seedDataGen.js",
     "start": "nodemon server/index.js",
     "test": "jest test/test.js",
     "review-server": "node database/initializer.js && node server/index.js"

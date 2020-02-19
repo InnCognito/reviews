@@ -1,18 +1,19 @@
 DROP TABLE IF EXISTS reviews;
 
 CREATE TABLE reviews (
-  id int PRIMARY KEY,
-  room_id int NOT NULL,
-  name varchar(20) NOT NULL,
-  date_posted text,
-  comment text,
-  accuracy_rating numeric(2,1) DEFAULT 2.5,
-  location_rating numeric(2,1) DEFAULT 2.5,
-  check_in_rating numeric(2,1) DEFAULT 2.5,
-  value_rating numeric(2,1) DEFAULT 2.5,
-  cleanliness_rating numeric(2,1) DEFAULT 2.5,
-  communication_rating numeric(2,1) DEFAULT 2.5,
-  overall_rating numeric(2,1) DEFAULT 2.5
+  id SERIAL,
+  room_id INT NOT NULL,
+  name VARCHAR(20) NOT NULL,
+  date_posted TIMESTAMP,
+  comment TEXT,
+  accuracy_rating SMALLINT,
+  location_rating SMALLINT,
+  check_in_rating SMALLINT,
+  value_rating SMALLINT,
+  cleanliness_rating SMALLINT,
+  communication_rating SMALLINT,
+  overall_rating SMALLINT,
+  PRIMARY KEY (room_id, id)
 );
 
 \COPY reviews FROM 'seedData.csv' WITH (FORMAT CSV);
