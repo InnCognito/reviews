@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const { Readable } = require('stream');
 const { Logfile } = require('./Logfile');
 const { genReviewObject } = require('./reviewGen');
@@ -22,9 +23,11 @@ const genReviewToFile = (entryCount = 0) => {
 
     for db insertion test
     with fix for handling new cache appending after new lines
+
+    utilizing updated datashape, representing ratings as integers
     `;
 
-    const outFile = '../database/seedData.csv';
+    const outFile = path.resolve(__dirname, '..', 'database', 'seedData.csv');
 
     let logMessage = `Initial output for ${entryCount} results,
 ${currentDevStep}`;
