@@ -9,6 +9,6 @@ COPY . /src/app
 
 RUN npm install
 
-EXPOSE 3004
+EXPOSE 3001
 
 CMD [ "npm", "run", "review-server" ]
