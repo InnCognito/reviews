@@ -14,7 +14,7 @@ const read = (target = 0) => {
   return new Promise ((res, rej) => {
     console.log('attempting read of entry at', target);
     const query = {
-      text: 'SELECT * FROM reviews WHERE room_id=$1 LIMIT 5',
+      text: 'SELECT * FROM reviews WHERE room_id=$1 ORDER BY date DESC',
       values: [target['room_id']],
     };
     pool.connect().then((client) => {
@@ -23,7 +23,7 @@ const read = (target = 0) => {
         .then(response => {
           console.log('query success');
           client.release();
-          res(response.rows[0]);
+          res(response.rows);
       })
         .catch(e => {
           console.log('query failure');
