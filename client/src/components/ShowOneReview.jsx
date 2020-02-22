@@ -69,7 +69,7 @@ class ShowOneReview extends React.Component {
           ></div>
           <div className={style.nameAndDate}>
             <div className={style.name} key={this.props.review.id + 'n'}>{this.props.review.name}</div>
-            <div className={style.date} key={this.props.review.id + 'd'}>{this.props.review.date}</div>
+            <div className={style.date} key={this.props.review.id + 'd'}>{this.props.review.date.substr(0, 10)}</div>
           </div>
         </div>
         <div className={style.sentence}>

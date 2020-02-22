@@ -59,6 +59,4 @@ ${currentDevStep}`;
     log.end();
 };
 
-module.exports = { genReviewToFile };
-
 genReviewToFile(30000000);

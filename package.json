@@ -7,9 +7,9 @@
     "node": ">=6.13.0"
   },
   "scripts": {
+    "start": "node server/index.js",
     "react-dev": "webpack -d --watch --mode production --module-bind js=babel-loader",
     "bulbasaur": "node data_generator/seedDataGen.js",
-    "start": "nodemon server/index.js",
     "test": "jest test/test.js",
     "review-server": "node database/initializer.js && node server/index.js"
   },
@@ -18,7 +18,9 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "mongoose": "^5.5.8",
+    "newrelic": "^6.4.1",
+    "pg": "^7.18.2",
+    "pg-pool": "^2.0.10",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-highlight-words": "^0.16.0",
@@ -38,11 +40,10 @@
     "faker": "^4.1.0",
     "file-system": "^2.2.2",
     "jest": "^24.8.0",
-    "mongoose-auto-increment": "^5.0.1",
     "nodemon": "^1.19.0",
     "style-loader": "^0.23.1",
-    "webpack": "^4.31.0",
-    "webpack-cli": "^3.3.2"
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
   },
   "version": "1.0.0",
   "main": "index.js",

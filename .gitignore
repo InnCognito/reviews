@@ -6,3 +6,4 @@ client/dist/bundle.js
 logfile
 *.log
 *.csv
+newrelic.js

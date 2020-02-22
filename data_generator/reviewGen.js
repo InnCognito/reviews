@@ -19,6 +19,10 @@ const genReviewObject = () => {
 
   review.name = faker.name.firstName();
 
+  review.gender = Math.round(Math.random());
+
+  review.profilePicNum = Math.floor(Math.random() * 80);
+
   review.date = faker.date.recent(90).toISOString();
 
   review.comment = faker.lorem.paragraph();
