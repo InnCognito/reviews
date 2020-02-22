@@ -12,7 +12,7 @@ const PORT = 3001;
 // app.use(cors());
 app.use(express.static(`${__dirname}/../client/dist`));
 
-app.get('/reviews/:room_id', (req, res) => {
+app.get('/api/reviews/:room_id', (req, res) => {
   const target = {room_id: req.params.room_id};
   db.read(target)
     .then((data) => res.status(200).send([{ reviews: data, room_id: target }]))
