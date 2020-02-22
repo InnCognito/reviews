@@ -1,4 +1,4 @@
-require('newrelic');
+// require('newrelic');
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -8,8 +8,8 @@ const app = express();
 
 const PORT = 3001;
 
-app.use(bodyParser.json());
-app.use(cors());
+// app.use(bodyParser.json());
+// app.use(cors());
 app.use(express.static(`${__dirname}/../client/dist`));
 
 app.get('/reviews/:room_id', (req, res) => {
